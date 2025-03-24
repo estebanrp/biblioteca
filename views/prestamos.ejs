@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="prestamos.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div class="socio">
+                <h2>Socio ID </h2>
+                <input type="text" placeholder="ID" name="id_socio">
+                <button class="green">Registrar préstamo</button>
+                <button class="red">Registrar socios</button>
+                <button class="gray">volver</button>
+            </div>
+        </div>
+        
+        <div class="Info">
+            <ul>
+                <li>ID:</li>
+                <li>Nombre:</li>
+                <li>Apellido:</li>
+                <li>Email:</li>
+                <li>N° documento:</li>
+                <li>Estado:</li>
+                <li>Inhabilitado hasta:</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // Datos simulados de socios (esto podría venir de una API o base de datos en el futuro)
+        const socios = {
+            "101": { nombre: "Juan", apellido: "Pérez", email: "juan@example.com", documento: "12345678", estado: "Activo", inhabilitado: "No aplica" },
+            "102": { nombre: "María", apellido: "Gómez", email: "maria@example.com", documento: "87654321", estado: "Suspendido", inhabilitado: "2025-01-01" },
+            "103": { nombre: "Carlos", apellido: "López", email: "carlos@example.com", documento: "56789012", estado: "Activo", inhabilitado: "No aplica" }
+        };
+    
+        // Función para buscar el socio y mostrar la información
+        function buscarSocio(event) {
+            if (event.key === "Enter") { // Si presiona Enter
+                const id = event.target.value.trim(); // Obtener el ID ingresado
+                const info = document.querySelector(".Info ul");
+    
+                if (socios[id]) {
+                    // Si el ID existe en los datos, actualizar la lista
+                    const socio = socios[id];
+                    info.innerHTML = `
+                        <li>ID: ${id}</li>
+                        <li>Nombre: ${socio.nombre}</li>
+                        <li>Apellido: ${socio.apellido}</li>
+                        <li>Email: ${socio.email}</li>
+                        <li>N° documento: ${socio.documento}</li>
+                        <li>Estado: ${socio.estado}</li>
+                        <li>Inhabilitado hasta: ${socio.inhabilitado}</li>
+                    `;
+                } else {
+                    // Si el ID no existe, mostrar un mensaje
+                    info.innerHTML = `<li>Socio no encontrado</li>`;
+                }
+            }
+        }
+    
+        // Agregar el evento al input
+        document.querySelector(".socio input").addEventListener("keypress", buscarSocio);
+    </script>
+</body>
+</html>

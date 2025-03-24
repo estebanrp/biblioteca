@@ -1,0 +1,70 @@
+body {
+    background-color: #222;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90vw; 
+    height: 90vh; 
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* Colores */
+.green {
+    background-color: darkgreen;
+    color: white;
+}
+
+.red {
+    background-color: darkred;
+    color: white;
+}
+
+.blue {
+    background-color: darkblue;
+    color: white;
+}
+
+.gold {
+    background-color: goldenrod;
+    color: black;
+}
+
+.gray {
+    background-color: gray;
+    color: white;
+}
+
+.buttons:last-child {
+    margin-top: 20px;
+}
