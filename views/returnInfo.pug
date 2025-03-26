@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  main.container
+    h1 INFO 
+    div 
+      h2 Socio: #{member.apellido_nombre}
+      h3 Sancion por demora: #{member.fecha_hasta_inhab}
+
+    div 
+      h2 Libro: #{book.titulo}
+      h3 Fecha de préstamo: #{loan.fecha_prestamo}
+      h3 Fecha de devolución estipulada: #{loan.fecha_hasta}
+      h3 Fecha de devolución real: #{loan.fecha_devolucion}
+
+    a(href='/', class='back-button') ↩️🏠 Volver

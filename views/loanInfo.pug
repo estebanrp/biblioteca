@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  main.container
+    h1 INFO 
+    div 
+      h2 Socio: #{member.apellido_nombre}
+      h3 Inhabilitación: #{member.fecha_hasta_inhab}
+
+    div 
+      if book.tipo == 'Consulta'
+        h2 El libro es solo de consulta
+      else if book.estado == 'Disponible'
+        h2 Libro: #{book.titulo}
+        h3 Fecha de préstamo: #{loan.fecha_prestamo}
+        h3 Fecha de devolución: #{loan.fecha_hasta}
+      else if book.estado == 'Prestado'
+        h2 Libro: El libro no está disponible
+        h3 Fecha estipulada de devolución: #{loan.fecha_hasta}
+
+    a(href='/', class='back-button') ↩️🏠 Volver
