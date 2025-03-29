@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <title>Prestamos</title>
+  <link rel="stylesheet" href="../public/p-styles.css">
+
+  <script defer src="../controllers/prestamo.js"></script>
+
+<body>
+  <header>
+    <button class="header-btn">Préstamo</button>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Sección de usuario -->
+      <div class="user-section">
+        <label for="user-id">Usuario ID:</label>
+        <input type="text" id="user-id">
+
+        <button class="btn green">Registrar préstamo</button>
+        <button class="btn red">Registrar socio</button>
+      </div>
+
+      <!-- Línea separadora -->
+      <div class="separator"></div>
+
+      <!-- Sección de información del usuario -->
+      <div class="info-user">
+        <p>Info User</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <button class="btn">Volver</button>
+  </footer>
+</body>
+
+</html>

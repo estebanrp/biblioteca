@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Hello from Electron renderer!</title>
+    <link rel="stylesheet" href="../public/styles.css">
+    
+    <script defer src="../controllers/renderer.js"></script>
+
+</head>
+  <body>
+    <header>
+        <p>Biblioteca</p>
+    </header>
+    <main>
+        <div class="main-buttons">
+            <button class="button-prestamo">Prestamo</button>
+            <button class="button-devolucion">Devolución</button>
+            <button class="button-ver-catalogo">Ver catálogo</button>
+        </div>
+        <hr>
+        <div class="minor-buttons">
+            <button class="button-mod">mod Socios</button>
+            <button class="button-mod">mod Catalogo</button>
+        </div>
+    </main>
+    <hr>
+    <footer>
+        <button class="button-salir">Salir</button>
+        <div class="help-buttons">
+            <button class="button-info">Info</button>
+            <button class="button-ayuda">Ayuda</button>
+        </div>
+    </footer>
+  </body>
+</html>

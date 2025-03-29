@@ -1,0 +1,90 @@
+/* Estilos generales */
+body {
+    background-color: #1e1e1e;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Botón en el header */
+.header-btn {
+    background: none;
+    border: 1px solid white;
+    padding: 8px 16px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #2e2e2e;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+
+/* Sección del usuario */
+.user-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+/* Input */
+input {
+    background: black;
+    color: white;
+    border: 1px solid white;
+    padding: 8px;
+    width: 150px;
+}
+
+/* Botones */
+.btn {
+    padding: 10px;
+    border: 1px solid white;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+.green {
+    background-color: #166534;
+}
+
+.red {
+    background-color: #6b1c1c;
+}
+
+/* Separador */
+.separator {
+    width: 1px;
+    height: 150px;
+    background-color: white;
+    margin: 0 20px;
+}
+
+/* Sección de info usuario */
+.info-user {
+    width: 150px;
+    height: 150px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4da6ff;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+}
